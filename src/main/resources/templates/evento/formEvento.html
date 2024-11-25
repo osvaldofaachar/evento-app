@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://thymeleaf.org" xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Evento</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="materialize/style/style.css"/>
+</head>
+<body>
+<header class="header">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Cadastro de Evento</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="waves-effect waves-light btn" th:href="eventos"><i class="material-icons left">list</i>Lista de Eventos</a></li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+    <th:block th:include="~{mensagemValidacao}"></th:block>
+    <div class="container formEvento">
+    <form class="container" method="post" action="cadastrarEvento">
+
+        Nome: <input type="text" value="" name="nome"/>
+        <div class="row">
+            <div class="input-field col s6">
+                 Local: <input type="text" value="" name="local"/>
+             </div>
+            <div class="input-field col s3">
+                 Data: <input type="date" value="" name="data"/>
+            </div>
+            <div class="input-field col s3">
+                 Horário: <input type="time" value="" name="horario"/>
+            </div>
+        </div>
+        <button type="submit" class="waves-effect waves-light btn">Marcar</button>
+
+
+    </form>
+    </div>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+</html>
